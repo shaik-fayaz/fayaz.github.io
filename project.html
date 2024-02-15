@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Italian style */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(206, 209, 203);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(206, 209, 203);
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+        }
+        .study {
+            margin-bottom: 20px;
+            clear: both;
+            width: 100%;
+            overflow: hidden;
+        }
+        .study h2 {
+            margin-top: 0;
+        }
+        .study p {
+            margin-top: 5px;
+        }
+        .study-image {
+            float: left;
+            width: 40%;
+            margin-right: 20px;
+        }
+        .study-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .study-info {
+            float: left;
+            width: 55%;
+        }
+        nav ul li a {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: yellow;
+        }
+        nav ul li a:hover {
+            background-color: lightgray;
+            border-radius: 5px;
+        }
+        header h1 {
+            margin: 10;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #88b04b;
+        }
+        .logo {
+            float: left;
+        }
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+        nav {
+            flex-grow: 1;
+            text-align: center;
+        }
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        body.dark-mode {
+    background-color: #222;
+}
+
+/* Light Theme Styles (default) */
+body.light-mode {
+    background-color: #f8f8f8;
+}
+
+/* Toggle Button Styles */
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    outline: none;
+}
+        footer {
+            color: black;
+            padding: 20px;
+        }
+        @media screen and (max-width: 600px) {
+            .study-image,
+            .study-info {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+            }
+            .study-image img {
+                margin-bottom: 10px;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="interest.html">Area Of Interest</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="theme-toggle">Toggle Theme</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<h1>My Projects</h1>
+<div class="container">
+    <div class="study">
+        <div class="study-image">
+            <img src="jlg.png" alt="Education Image">
+        </div>
+        <div class="study-info">
+            <h2>JLG</h2>
+            <p>I began as a Java Developer, tasked with crafting efficient and reliable backend solutions for our commerce application. Over time, my role expanded to encompass the crucial responsibility of monitoring and maintaining the smooth operation of critical backend functionalities. Swiftly addressing tickets and resolving issues during maintenance cycles became a cornerstone of my daily routine, ensuring uninterrupted site performance.</p>
+        </div>
+    </div>
+    <div class="study">
+        <div class="study-image">
+            <img src="lbg.png" alt="Education Image">
+        </div>
+        <div class="study-info">
+            <h2>Llyods Banking Group</h2>
+            <p>In the LBG project, I specialized in automated testing, focusing on unit and automation testing techniques. Utilizing various tools, I created and executed unit tests to validate individual components. Automation tools were instrumental in streamlining the testing process, ensuring efficiency and accuracy. My role significantly contributed to maintaining high-quality standards and meeting project objectives effectively.</p>
+        </div>
+    </div>
+    <div class="study">
+        <div class="study-image">
+            <img src="ericson.png" alt="Education Image">
+        </div>
+        <div class="study-info">
+            <h2>Ericsson</h2>
+            <p>In the Ericsson project, I served as a support specialist, maintaining critical applications and resolving high-priority tickets. My role entailed promptly addressing issues to ensure uninterrupted operation and client satisfaction. Through diligent ticket resolution, I upheld service reliability and minimized downtime. This proactive approach enabled efficient problem-solving and contributed to the smooth functioning of the Ericsson project.</p>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const themeToggle = document.getElementById("theme-toggle");
+
+        themeToggle.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            document.body.classList.toggle("light-mode");
+        });
+    });
+</script>
+<footer>
+    <p>© 2024 Your Website Name. All rights reserved.</p>
+</footer>
+</body>
+</html>

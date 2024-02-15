@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(206, 209, 203);
+        color: #333;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        margin-top: 20px;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(206, 209, 203);
+        background-size: cover;
+        background-position: center;
+        color: #333;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    h1 {
+        text-align: center;
+    }
+    .study {
+        margin-bottom: 20px;
+        clear: both;
+        width: 100%;
+        overflow: hidden;
+    }
+    .study h2 {
+        margin-top: 0;
+    }
+    .study p {
+        margin-top: 5px;
+    }
+    .study-image {
+        float: left;
+        width: 40%;
+        margin-right: 20px;
+    }
+    .study-image img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    .study-info {
+        float: left;
+        width: 55%;
+    }
+    nav ul li a {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        color: yellow;
+    }
+    nav ul li a:hover {
+        background-color: lightgray;
+        border-radius: 5px;
+    }
+    header h1 {
+        margin: 10;
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #88b04b;
+    }
+    .logo {
+        float: left;
+    }
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+    nav {
+        flex-grow: 1;
+        text-align: center;
+    }
+    nav ul {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+    footer {
+            color: black;
+            padding: 20px;
+        }
+        body.dark-mode {
+    background-color: #222;
+}
+
+/* Light Theme Styles (default) */
+body.light-mode {
+    background-color: #f8f8f8;
+}
+
+/* Toggle Button Styles */
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    outline: none;
+}
+    @media screen and (max-width: 600px) {
+        .study-image,
+        .study-info {
+            width: 100%;
+            float: none;
+            margin-right: 0;
+        }
+        .study-image img {
+            margin-bottom: 10px;
+        }
+        nav {
+            flex-direction: column;
+        }
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+    }
+</style>
+<body>
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="interest.html">Area Of Interest</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="theme-toggle">Toggle Theme</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<h1>Qualification</h1>
+<div class="container">
+    <div class="study">
+        <div class="study-image">
+            <img src="nmsu.jpg" alt="Education Image">
+        </div>
+        <div class="study-info">
+            <h2>Masters in Computer Science</h2>
+            <p>University: New Mexico State University</p>
+            <p>Location: LasCruces, New Mexico, USA</p>
+            <p>Year: 2023 - present</p>
+        </div>
+    </div>
+    <div class="study">
+        <div class="study-image">
+            <img src="gvpe.jpg" alt="Education Image">
+        </div>
+        <div class="study-info">
+            <h2>Bachelor's Degree in Information Technology</h2>
+            <p>University: Jawaharlal Nehru Technological University</p>
+            <p>Location: Visakhapatnam, Andhra Pradesh, India</p>
+            <p>Year: 2017 - 2021</p>
+        </div>
+    </div>
+    <div class="study">
+        <div class="study-image">
+            <img src="inter.jpg" alt="Education Image">
+        </div>
+        <div class="study-info">
+            <h2>High School Diploma</h2>
+            <p>College: Sri Chaitanya Junior College</p>
+            <p>Location: Visakhapatnam, Andhra Pradesh, India</p>
+            <p>Year: 2015 - 2017</p>
+        </div>
+    </div>
+    <div class="study">
+        <div class="study-image">
+            <img src="school.jpg" alt="Education Image">
+        </div>
+        <div class="study-info">
+            <h2>Primary School Diploma</h2>
+            <p>School: Sri Chaitanya Public school</p>
+            <p>Location: Visakhapatnam, Andhra Pradesh, India</p>
+            <p>Year of Completion: 2015</p>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const themeToggle = document.getElementById("theme-toggle");
+
+        themeToggle.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            document.body.classList.toggle("light-mode");
+        });
+    });
+</script>
+<footer>
+    <p>© 2024 Your Website Name. All rights reserved.</p>
+</footer>
+</body>
+</html>

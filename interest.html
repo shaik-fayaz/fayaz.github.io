@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Interest</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: rgb(206, 209, 203);
+        background-size: cover;
+        background-position: center;
+    }
+    nav ul li a {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        color: yellow;
+    }
+    nav ul li a:hover {
+        background-color: lightgray;
+        border-radius: 5px;
+    }
+    header h1 {
+        margin: 10px;
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #88b04b;
+    }
+    .logo {
+        float: left;
+    }
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+    nav {
+        flex-grow: 1;
+        text-align: center;
+    }
+    nav ul {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+    .video-container {
+        text-align: center;
+    }
+    .video-wrapper {
+        display: inline-block;
+    }
+    /* Dark Theme Styles */
+body.dark-mode {
+    background-color: #222;
+}
+
+/* Light Theme Styles (default) */
+body.light-mode {
+    background-color: #f8f8f8;
+}
+
+/* Toggle Button Styles */
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    outline: none;
+}
+footer {
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+#theme-toggle:hover {
+    color: red;
+}
+    @media only screen and (max-width: 768px) {
+        header h1 {
+            margin: 5px;
+        }
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+        nav ul li:last-child {
+            margin-bottom: 0;
+        }
+        .logo {
+            float: none;
+            margin-bottom: 10px;
+        }
+        .logo img {
+            width: 40px;
+        }
+    }
+</style>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="interest.html">Area Of Interest</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="theme-toggle">Toggle Theme</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video-container">
+        <h2>Area of Interest</h2>
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wTbrk0suwbg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="ai-paragraph">
+        <h3>Artificial Intelligence and the Future</h3>
+        <p>Artificial intelligence (AI) is poised to revolutionize the way we live and work in the future. With advancements in machine learning, natural language processing, and robotics, AI systems are becoming increasingly capable of performing complex tasks that were once thought to be exclusive to human intelligence.</p>
+        <p>In the future, AI is expected to impact various sectors, including healthcare, transportation, finance, and education. From personalized medicine and autonomous vehicles to predictive analytics and intelligent tutoring systems, the applications of AI are vast and diverse.</p>
+        <p>While AI offers tremendous potential to improve efficiency, productivity, and decision-making, it also raises ethical and societal concerns. Issues such as job displacement, algorithmic bias, privacy infringement, and the existential risks of superintelligent AI require careful consideration and regulation.</p>
+        <p>Despite the challenges, the future of AI holds promise for solving some of humanity's most pressing problems and ushering in a new era of innovation and progress.</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const themeToggle = document.getElementById("theme-toggle");
+
+            themeToggle.addEventListener("click", function() {
+                document.body.classList.toggle("dark-mode");
+                document.body.classList.toggle("light-mode");
+            });
+        });
+    </script>
+    <footer>
+        <p>© 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
